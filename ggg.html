@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3</title>
+</head>
+<style type="text/css">
+* {
+    padding:0px;
+    margin:0 auto;
+}
+.box {
+    position:relative;
+    width:184px;
+    height:270px;
+    margin:30px auto;
+    text-align:center;
+    cursor:pointer;
+    line-height:40px;
+    font-size:16px;
+    font-weight:bold;
+}
+.same{
+	border: 1px dashed #ccc;
+    overflow:hidden;
+    position:absolute;
+    width:184px;
+    height:270px;
+    transition:all .3s linear 0s;
+    -webkit-transition:all .3s linear 0s;
+    -moz-transition:all .3s linear 0s;
+    -ms-transition:all .3s linear 0s;
+    transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;   
+}
+.front {
+	color:#0066CC;
+    transform:rotateY(0deg);
+    -webkit-transform:rotateY(0deg);
+    -moz-transform:rotateY(0deg);
+    -ms-transform:rotateY(0deg);
+}
+.back {
+    color:#F00;
+    transform:rotateY(-180deg) ;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    -ms-transform:rotateY(-180deg);   
+}
+.box:hover .front {
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+}
+.box:hover .back {
+    transform:rotateY(0deg);
+    -webkit-transform:rotateY(0deg);
+    -moz-transform:rotateY(0deg);
+    -ms-transform:rotateY(0deg);
+}
+.rotate {
+text-align: center;
+line-height: 100px;
+ overflow: hidden;
+ width:300px;
+ height:300px;
+ border:1px solid #d2d2d2;
+ -webkit-animation-name: myfirst;
+-webkit-animation-duration: 5s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay: 0.1s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: inherit;
+-webkit-animation-play-state: running;
+border-radius: 50%;
+}
+@keyframes myfirst
+{
+    0%   {border:1px solid #d2d2d2;
+       
+    }
+    25%  {border:1px solid #d2d2d2;
+    
+    }
+    50%  {border:1px solid #d2d2d2;
+    
+    }
+    100% {border:1px solid #d2d2d2;
+    transform: rotate(360deg);
+    }
+}
+.rotate-3d {
+text-align: center;
+line-height: 100px;
+width: 300px;
+height: 300px;
+background: black;
+/*-webkit-animation-name: myfirsts;
+-webkit-animation-duration: 5s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay: 2s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: inherit;
+-webkit-animation-play-state: running;	*/
+}
+@keyframes myfirsts
+{
+    0%   {border:1px solid #d2d2d2;;
+       
+    }
+    25%  {border:1px solid #d2d2d2;;
+    
+    }
+    50%  {border:1px solid #d2d2d2;;
+    
+    }
+    100% {border:1px solid #d2d2d2;;
+    transform: rotateY(360deg);
+    /*transform: rotateX(360deg);*/
+    }
+}
+.blacks {
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    top: 80px;
+    z-index: 99;
+    background: black;
+}
+.wlit{
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid royalblue; */
+    border-radius: 50%;
+    position: absolute;
+    left: 151px;
+    top: 71px;
+    z-index: 99;
+    background: white;
+}
+.w1{
+	width: 300px;
+	height: 150px;
+	background: white;
+}
+.b1{
+	width: 300px;
+	height: 150px;
+	background: black;
+}
+.wa{
+	width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 62px;
+}
+.ba{
+	width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    left: 66px;
+}
+#dt {
+	width:300px;
+	height: 300px;
+	border:solid 1px white;
+	position: absolute;
+	background:url(img/timg.jpg);
+	background-repeat:repeat-x;
+	background-size: cover;
+	border-radius: 50%;
+}
+.boxw ,.boxs{
+	margin: 100px 100px;
+}
+#p1 {
+	clear: both;
+}
+</style>
+<body>
+<div class="boxw">
+
+	<div class="rotate">
+    <div class="w1">
+    </div>
+    <div class="b1">
+    </div>
+  	<div class="blacks">
+  		<div class="wa">
+  			
+  		</div>
+  	</div>
+  	<div class="wlit">
+  	  <div class="ba">
+  	  	
+  	  </div>
+  	</div>
+  </div>
+</div>
+<div class="boxs">
+<div class="rotate-3d">
+  	 <div id="dt">
+  	 	
+  	 </div>
+  </div>
+</div>
+</body>
+<script>
+	var numberd = 0;
+	function test (){
+		numberd +=1
+	document.getElementById("dt").style.backgroundPosition ='-'+numberd+'px'
+	
+	}
+	setInterval(function(){test()},60)
+	test()
+</script>
+</html>
